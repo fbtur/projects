@@ -1,0 +1,47 @@
+.tab_nav {
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.navbar {
+    margin-top: 20px;
+}
+
+html {
+    background: url(../IMG/backgound.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.myForm {
+    display: flex;
+    justify-content: center;
+    border: 2px solid whitesmoke;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: rgba(126, 126, 126, 0.295);
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.img_style {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.alert {
+    margin-top: 10px;
+    padding: 5px;
+    border: 2px solid red;
+}

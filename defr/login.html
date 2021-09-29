@@ -1,0 +1,60 @@
+<!-- register forms -->
+<div class="row myForm">
+    <div class="col-md-4 img_style">
+        <img src="IMG/more_tree.png" alt="SC LEMNUL SRL" height="250px">
+    </div>
+    <div class="col-md-5" style="color: whitesmoke; margin: 20px;">
+        <h2>Autentificare</h2>
+        <form>
+            <div class="form-group">
+                <label for="email">Adresă e-mail</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email@wood.ro">
+                <small id="emailHelp" class="form-text text-muted">Nu vom distribui e-mailul dv către
+                    terțe.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Parolă</label>
+                <input type="password" class="form-control" id="password" placeholder="Parolă">
+            </div>
+            <div class="alert alert-danger" id="errorBox" style="margin-top: 10px; display: none;">
+                <p style="margin: 0px" id="showError"></p>
+            </div>
+            <div class="alert alert-success" id="successBox" style="margin-top: 10px; display: none;">
+                <p style="margin: 0px" id="showSuccess"></p>
+            </div>
+            <button type="button" class="btn btn-success" style="margin-top: 10px; width: 100%;" onclick="sendData()">Autentifică-te</button>
+        </form>
+    </div>
+</div>
+
+
+<script>
+    function sendData() {
+        var pass = document.getElementById("password").value;
+        var email = document.getElementById("email").value;
+
+        var data = "password=" + pass + "&email=" + email;
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                if (this.responseText == 'Success!') {
+                    $("#successBox").show();
+                    document.getElementById("showSuccess").innerHTML = this.responseText;
+                    setTimeout(function() {
+                        window.location.replace("https://ie.usv.ro/~filipb/Examen/");
+                    }, 3000);
+                } else {
+                    $("#errorBox").show();
+                    setTimeout(function() {
+                        $("#errorBox").hide();
+                    }, 5000);
+                    document.getElementById("showError").innerHTML = this.responseText;
+                }
+            }
+        };
+        xmlhttp.open("POST", "PHP/login.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send(data);
+
+    }
+</script>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact</title>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assett" rel="stylesheet">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  </head>
+  <body >
+  <div class="topnav">
+    <a  href="index.html">Home</a>
+    <a href="galerie.html">Galerie Auto</a>
+    <a class="active" href="contact.html">Contact</a>
+  </div>
+
+   <img src="https://www.crs-reprocessing.com/wp-content/uploads/2015/08/contact-header.jpg" class="responsive">
+  <h1>Date de contact: </h1>
+  <div id="a">
+  <a>
+
+    Adresa: Orasul Donduseni, Strada Independentei <br>
+    Telefon: +373 600 345 78<br>
+    E-Mail: lada@showroom.md<br>
+  </a>
+  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1gAhNJvW9DY9__3q5U5CzpLJEtTjq4mzU" width="100%" height="500"></iframe>
+<p>
+
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Contact</button>
+
+
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-dialog modal-md">
+                <h4 style="color:black">Contacteaza-ne</h4>
+
+                <form action="https://ie.usv.ro/citeste.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+
+                      <label for="email" style="color:black">E-mail</label>
+                      <input type="email" class="form-control" placeholder="exemplu@mail.com" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for ="sbj"style="color:black">Subiect</label>
+                        <input type="text" class="form-control" placeholder="aici subiectul" id="sbj" style="color: black;">
+                    <div class="form-group">
+
+                      <label for="msg" style="color: black;">Mesaj</label>
+
+                      <textarea cols="80" rows="8" name="mesaj" placeholder="aici mesajul"></textarea>
+                    </div>
+                    <div class="form-group form-check">
+                      <label class="form-check-label">
+
+                      </label>
+                    </div>
+                    <input type="submit" name="sbmt" value="Trimite"> <input type="reset" name="reset" value="Reset">
+        </div>
+
+
+        <div class="modal-footer">
+          	<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+                  </form>
+          </div>
+        </div>
+
+</div>
+</div>
+
+  <footer>
+<small>&copy; Copyright Bernaz 2020</small>
+</footer>
+
+
+  </body>
+  </html>
